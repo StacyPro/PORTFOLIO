@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anastasiia Pronina | Hair Colorist | Hairdresser | Barber | Editorial Stylist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0d0d0d;
+      --card-bg: #141414;
+      --accent-gold: #c5a059;
+      --text-light: #f4f4f4;
+      --text-muted: #a0a0a0;
+      --border-color: #262626;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-light);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Header / Business Card Section */
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+    }
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.8rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      font-size: 0.95rem;
+      letter-spacing: 3px;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+    .credentials-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .tag {
+      background: rgba(197, 160, 89, 0.1);
+      border: 1px solid var(--accent-gold);
+      color: var(--text-light);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+    .contact-btn {
+      display: inline-block;
+      background-color: var(--accent-gold);
+      color: #000;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    .contact-btn:hover {
+      background-color: #d4af66;
+      transform: translateY(-2px);
+    }
+
+    /* Philosophy */
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      text-align: center;
+      margin: 50px 0 25px 0;
+      letter-spacing: 2px;
+    }
+    .philosophy {
+      max-width: 800px;
+      margin: 0 auto 50px auto;
+      text-align: center;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      font-style: italic;
+      line-height: 1.8;
+      padding: 0 20px;
+    }
+
+    /* Experience Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 30px;
+      border-radius: 6px;
+    }
+    .card h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--text-light);
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      border-bottom: 1px solid var(--accent-gold);
+      padding-bottom: 8px;
+    }
+    .card ul {
+      list-style: none;
+    }
+    .card li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 12px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .card li::before {
+      content: "•";
+      color: var(--accent-gold);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    .card li strong {
+      color: var(--text-light);
+    }
+
+    /* Editorial Portfolio Gallery */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+    .portfolio-item {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(15%);
+      transition: filter 0.3s ease, transform 0.3s ease;
+    }
+    .portfolio-item:hover img {
+      filter: grayscale(0%);
+      transform: scale(1.02);
+    }
+    .portfolio-caption {
+      padding: 20px;
+      flex-grow: 1;
+    }
+    .portfolio-caption h4 {
+      font-family: 'Cinzel', serif;
+      color: var(--accent-gold);
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+    .portfolio-caption p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    footer p {
+      margin-bottom: 10px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .subtitle { font-size: 0.85rem; }
+      .portfolio-item img { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Anastasiia Pronina</h1>
+      <div class="subtitle">Barber • Editorial Stylist • Hairdresser</div>
+      <div class="credentials-bar">
+        <span class="tag">London College of Style</span>
+        <span class="tag">Toni&Guy Foundation</span>
+        <span class="tag">Sam Villa (Redken)</span>
+        <span class="tag">SACO Paris</span>
+        <span class="tag">Chris Baran Masterclasses</span>
+        <span class="tag">JR Slane Cuts+Styling</span>
+      </div>
+      <a href="tel:+14383427936" class="contact-btn">Direct Contact: +1 (438) 342-7936</a>
+    </header>
+
+    <h2 class="section-title">The Philosophy</h2>
+    <div class="philosophy">
+      "Your style should reflect your personality, not just a trend. I create a direct connection between who you are on the inside and where you want to go in life. Together, we build an image that supports your biggest goals — going way deeper than just copying a picture from Instagram."
+    </div>
+
+    <h2 class="section-title">Background & Master Training</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Specialisations & Mastery</h3>
+        <ul>
+          <li><strong>London College of Style:</strong> Professional Stylist Specialisation</li>
+          <li><strong>Toni&Guy Foundation:</strong> Classic & Creative Precision Geometry</li>
+          <li><strong>SACO Paris:</strong> Editorial Academy with Richard Ashforth</li>
+          <li><strong>Redken Global Mentorship:</strong> Trained by Sam Villa</li>
+          <li><strong>Advanced Masterclasses:</strong> Chris Baran Precision Techniques</li>
+          <li><strong>Redken Russia:</strong> Color Expert & Product Specialist</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Art Direction & Campaigns</h3>
+        <ul>
+          <li><strong>Editorial Art Director:</strong> "Maija" Hair Salon & Redken Loft</li>
+          <li><strong>Backstage Stylist:</strong> Super Magazine's Day Event (with Vlad Lisovets)</li>
+          <li><strong>Fashion Campaigns:</strong> JNBY, Russia Fashion Week, Shopping Guide Magazine</li>
+          <li><strong>High Jewelry Backstage:</strong> Familia & Gold of Brazil Shows</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section-title">Selected Editorial Portfolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="9.jpg" alt="SACO Editorial Look 1">
+        <div class="portfolio-caption">
+          <h4>SACO Editorial (Paris)</h4>
+          <p>
+            <strong>Art Direction:</strong> Richard Ashforth<br>
+            <strong>Hair:</strong> Anastasiia Pronina<br>
+            <strong>MUA:</strong> SACO Paris Team<br>
+            <strong>Photo:</strong> Maxim Stange
+          </p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="6.jpg" alt="SACO Editorial Look 2">
+        <div class="portfolio-caption">
+          <h4>SACO Editorial (Paris)</h4>
+          <p>
+            <strong>Art Direction:</strong> Richard Ashforth<br>
+            <strong>Hair:</strong> Anastasiia Pronina<br>
+            <strong>MUA:</strong> SACO Paris Team<br>
+            <strong>Photo:</strong> Maxim Stange
+          </p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="04.jpg" alt="Redken Creative Styling">
+        <div class="portfolio-caption">
+          <h4>Redken Campaign</h4>
+          <p><strong>Art Direction & Hair:</strong> Anastasiia Pronina</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="02.jpg" alt="Editorial Male Hair Styling">
+        <div class="portfolio-caption">
+          <h4>Male Editorial</h4>
+          <p>
+            <strong>Art Direction & Hair:</strong> Anastasiia Pronina<br>
+          </p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="3.jpg" alt="Precision Geometry Haircut">
+        <div class="portfolio-caption">
+          <h4>Precision Geometry</h4>
+          <p>
+            <strong>Art Direction & Hair:</strong> Anastasiia Pronina<br>
+            Short Form Architectural Cut
+          </p>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <img src="5.jpg" alt="JNBY Editorial Campaign">
+        <div class="portfolio-caption">
+          <h4>JNBY Editorial</h4>
+          <p><strong>Art Direction & Hair:</strong> Anastasiia Pronina</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p><strong>Anastasiia Pronina</strong> | Hair Colorist | Hairdresser | Barber | Editorial Stylist</p>
+      <p>Phone: +1 (438) 342-7936</p>
+    </footer>
+  </div>
+</body>
+</html>
